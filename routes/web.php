@@ -57,4 +57,12 @@ Route::get('Week7',function (){
     return view('Week7');
 })->name('Week7');
 
-Route::get
+Route::get('/blog', function () {
+    return view('home');
+});
+Route::get('/blog/tentang', function () {
+    return view('tentang');
+});
+Route::get('/blog/kontak', function () {
+    return view('kontak');
+});
