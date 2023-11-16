@@ -1,0 +1,99 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.juna-polygon{
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.juna-konten{
+    margin-top: 3vw;
+    width: fit-content;
+
+}
+.juna-logo{
+    display: flex;
+    margin-bottom: 2vw;
+}
+.juna-logo img{
+    width: 10vw;
+    margin-left: auto;
+}
+
+.juna-judul{
+    width: fit-content;
+    font-size: 2.7vw;
+    font-weight: bold;
+}
+.juna-list{
+    display: flex;
+    height: fit-content;
+}
+.juna-list ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.juna-list li{
+    margin-left: 2vw;
+    margin-top: -5px;
+    margin-bottom: 1vw;
+    font-size: 2vw;
+}
+.juna-list img{
+    width: 2.5vw;
+    height: 2.5vw;
+}
+.juna-isi ul{
+    display: block;
+    list-style: none;
+    padding: 0px;
+}
+.juna-isi .juna-list{
+    padding-bottom: 20px;
+}
+.juna-isi{
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 719px){
+    .juna-polygon{
+        width: 70%;
+        height: auto;
+    }
+    .juna-logo img{
+        width: 16vw;
+    }
+    .juna-konten{
+        position: relative;
+        right: 22vw;
+    
+    }
+    .juna-judul{
+        font-size: 5vw;
+    }
+    .juna-list img{
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+    .juna-list li{
+        font-size: 3vw;
+    }
+    
+}
+
+
+
+
+
