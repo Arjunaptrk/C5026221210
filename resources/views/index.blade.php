@@ -9,14 +9,25 @@
 	<a href="/pegawai/tambah" class="btn btn-primary border border-rounded py-1 px-3 rounded-pill"> + Tambah Pegawai Baru</a>
 
 	<br/>
+    <br/>
 	<br/>
-
-    <p>Cari Data Pegawai :</p>
-    <form action="/pegawai/cari" method="GET">
-        <input type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari', isset($cari)? $cari : '') }}" class="form-control">
-        <input type="submit" value="CARI" class="btn btn-info mt-1 mb-5">
-    </form>
-
+    <div class="row">
+        <div class="col">
+            <p>Cari Data Pegawai :</p>
+        </div>
+        <div class="col">
+            <form action="/pegawai/cari" method="GET" class="float-right">
+                <div class="row">
+                    <div class="col-auto">
+                        <input class="form form-control" type="text" name="cari" placeholder="Cari Nama Pegawai .." value="{{ old("cari", isset($cari) ? $cari : '') }}">
+                    </div>
+                    <div class="col-auto">
+                        <input type="submit" value="CARI" class="btn btn-info">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 	<table class="table table-striped table-hover">
 		<tr>
 			<th>Nama</th>
@@ -35,6 +46,8 @@
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning">Edit</a>
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger d-md-inline d-block mt-3">Hapus</a>
+                |
+                <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-primary">View</a>
 			</td>
 		</tr>
 		@endforeach
