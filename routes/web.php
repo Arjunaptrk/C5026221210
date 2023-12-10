@@ -67,7 +67,7 @@ Route::get('/blog/kontak', function () {
     return view('kontak');
 });
 Route::get('iniForm', function () {
-    return view('iniFOrm');
+    return view('iniForm');
 });
 Route::get('master', function () {
     return view('master');
@@ -85,3 +85,20 @@ Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
+Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@index');
+Route::get('/nilaikuliah/tambahnilai','App\Http\Controllers\NilaiKuliahController@tambahnilai');
+Route::post('/nilaikuliah/storenilai','App\Http\Controllers\NilaiKuliahController@storenilai');
+//route CRUD Ikan
+Route::get('/sepedah','App\Http\Controllers\sepedahController@index');
+Route::get('/sepedah/tambahsepedah','App\Http\Controllers\sepedahController@tambah');
+Route::post('/sepedah/store','App\Http\Controllers\sepedahController@store');
+Route::get('/sepedah/edit/{id}','App\Http\Controllers\sepedahController@edit');
+Route::post('/sepedah/update','App\Http\Controllers\sepedahController@update');
+Route::get('/sepedah/hapus/{id}','App\Http\Controllers\sepedahController@hapus');
+Route::get('/sepedah/cari','App\Http\Controllers\sepedahController@cari');
+Route::get('/sepedah/view/{id}','App\Http\Controllers\sepedahController@view');
+//route CRUD
+Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangController@index');
+Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangController@beli');
+Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
+Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangController@hapus');

@@ -17,10 +17,10 @@
         <!-- Links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
+            <a class="nav-link" href="#">Nilai Kuliah</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
+            <a class="nav-link" href="#">Keranjang Belanja</a>
           </li>
 
           <!-- Dropdown -->
@@ -29,9 +29,10 @@
               Dropdown link
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Link 1</a>
-              <a class="dropdown-item" href="#">Link 2</a>
-              <a class="dropdown-item" href="#">Link 3</a>
+              <a class="dropdown-item" href="#">Home</a>
+              <a class="dropdown-item" href="/nilaikuliah">NilaiKuliah</a>
+              <a class="dropdown-item" href="/keranjangbelanja">KeranjangBelanja</a>
+              <a class="dropdown-item" href="/sepedah">Sepedah</a>
             </div>
           </li>
         </ul>
