@@ -106,4 +106,4 @@ Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangController@be
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
 Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangController@hapus');
 //route UAS
-Route::get('/counter/updateCount','App\Http\Controllers\CounterController@updateCount');
+Route::get('/counter','App\Http\Controllers\CounterController@index');

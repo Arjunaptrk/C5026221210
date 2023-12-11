@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class CounterController extends Controller
 {
-    public function updateCount()
-    {
-        $counter = Counter::firstOrCreate(['ID' => 1], ['Jumlah' => 0]);
-        $counter->increment('Jumlah');
-        $count = $counter->jumlah;
+	public function index()
+	{
+        //import database counter dan lakukan increment untuk looping hasil pada tabel jumlah
+        DB::table('counter')->increment('Jumlah');
+        $counter = DB::table('counter')->first();
+        return view('indexcounter', ['counter' => $counter]);
+	}
 
-        return view('counter', ['count' => $count]);
-    }
 }
