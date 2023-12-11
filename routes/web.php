@@ -72,6 +72,9 @@ Route::get('iniForm', function () {
 Route::get('master', function () {
     return view('master');
 });
+Route::get('counter', function () {
+    return view('counter');
+});
 
 Route::get('formulir', 'App\Http\Controllers\ContohController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\ContohController@proses');
@@ -102,3 +105,5 @@ Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangController@index')
 Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangController@beli');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
 Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangController@hapus');
+//route UAS
+Route::get('/counter/updateCount','App\Http\Controllers\CounterController@updateCount');
